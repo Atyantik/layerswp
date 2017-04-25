@@ -506,6 +506,11 @@ if( !function_exists( 'layers_body_class' ) ) {
 			$classes[] = 'layers-post-page';
 		}
 
+		// Handle overlay / not overlay
+		if( TRUE == layers_get_theme_mod( 'enable-scroll-animations' ) ){
+			$classes[] = 'layers-scroll-animate';
+		}
+
 		if( ( is_single() || is_archive() ) && !$left_sidebar_active && !$right_sidebar_active ){
 			$classes[] = 'no-sidebar';
 		}
